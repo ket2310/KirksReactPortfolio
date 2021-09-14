@@ -1,0 +1,66 @@
+:root {
+    --block-background: rgb(255, 128, 0);
+    --block-font: rgb(0,0,153);
+  }
+  
+header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1%;
+      Background-color: var(--block-font);
+      color: var(--block-background);
+}
+
+
+h1 {
+  text-align: right;
+  padding: 1%;
+  width: 400px;
+  font-size: 200%;
+  background-color: var(--block-background);
+  color: var(--block-font);
+}
+
+h2 {
+  
+  font-size: 250%;
+  background-color: var(--block-background);
+  color: var(--block-font);
+}
+
+nav {
+  width: 500px;
+  
+}
+
+nav a {
+  color: #b9c6ae;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between;
+  flex-wrap: wrap; */
+  font-size: 150%;
+  
+  
+}
+
+li {
+  display: inline-flex;
+  justify-content: center;
+}
+nav a {
+  color: var(--block-background);
+  font-weight: bold;
+  text-decoration: none;
+}
