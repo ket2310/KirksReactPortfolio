@@ -1,11 +1,13 @@
-import AboutMe from './components/AboutMe';
+import React, { useState } from 'react';
+import Navigation from './components/Navigation';
 import MyHeader from './components/MyHeader'
 
 function App() {
+  const [currentPg, setPage] = useState('AboutMe')
   return (
     <div>
       <MyHeader />
-      <AboutMe/>
+      <Navigation currentPg={currentPg} setPage={setPage} />
     </div>
   );
 }

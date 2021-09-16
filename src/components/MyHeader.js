@@ -1,22 +1,48 @@
 import React from "react";
-import '../header.css'
+import '../styles/header.css';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
+import Resume from "./Resume";
+import AboutMe from "./AboutMe";
+import Contact from "./Contact";
+import Portfolio from "./Portfolio";
 
+function MyHeader() {
+    return (
+        <Router>
+            <div>
+                <header>
+                    <h1>KIRK EVAN THOMAS</h1>
+                    <nav>
+                        <ul>
+                            <li><Link to={"/about"}>About Me</Link></li>&nbsp; | &nbsp;
+                            <li><Link to={"/portfolio"}>Portfolio</Link></li> &nbsp; | &nbsp;
+                            <li><Link to={"/contact"}>Contact Me</Link></li> &nbsp; | &nbsp;
+                            <li><Link to={"/resume"}>Resume</Link></li>
+                        </ul>
+                    </nav>
 
-function MyHeader () {
-    return (  
-    <div>
-    <header>
-        <h1>KIRK EVAN THOMAS</h1>
-        <nav>
-            <ul>
-                <li><a href="#about-me">About Me</a></li>&nbsp; | &nbsp;
-                <li><a href="#my-work">Portfolio</a></li> &nbsp; | &nbsp;
-                <li><a href="#contact-me">Contact Me</a></li> &nbsp; | &nbsp;
-                <li><a href="./assets/images/The Resume of Kirk E Thomas.pdf" target="_blank">Resume</a></li>
-            </ul>
-        </nav>
-    </header>
-    </div>
+                    <Switch>
+                        <Route path="/resume">
+                            <Resume />
+                        </Route>
+                        <Route path="/aboutme">
+                            <AboutMe />
+                        </Route>
+                        <Route path="/contact">
+                            <Contact />
+                        </Route>
+                        <Route path="/portfolio">
+                            <Portfolio />
+                        </Route>
+                    </Switch>
+                </header>
+            </div>
+        </Router>
     );
 }
 

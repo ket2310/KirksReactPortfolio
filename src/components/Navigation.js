@@ -1,10 +1,27 @@
-import React from "react";
+import React from 'react';
 
-
-
-function Portfolio() {
+// Here we destructure our props into their own distinct variables
+export default function Navigation({ currPg, setPage }) {
+    console.log(currPg)
     return (
         <div>
+            {currPg === "AboutMe"} (
+            <div class="MyBio">
+                <p>
+                    Full stack web developer with a solid history of creating web applications for organizations
+                    Core, VB,
+                    C#/ MVC, Javascript, and Entity Framework. Astute problem-solver who is capable of prioritizing and
+                    managing
+                    complex projects independently or in collaboration with others. Successfully migrated an application
+                    from File
+                    Maker Pro to .NET Core. Rebuilt the application from scratch, designing the models and migrating them to
+                    a SQL
+                    Server database. Tenacious problem-solver who sees obstacles as solutions waiting to be discovered.
+                </p>
+            </div>
+            )
+            {currPg === 'Portfolio'}(
+                <div>
             <div class="featuredProj">
                 <section class="Wilbert">
                     <a href="https://github.com/Amplimark/WilbertSvcs.Management"  class="grid-item">
@@ -52,7 +69,8 @@ function Portfolio() {
                 </section>
             </div>
         </div>
-    );
-}
 
-export default Portfolio;
+            )
+        </div>
+    )
+}
