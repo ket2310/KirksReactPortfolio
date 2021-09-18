@@ -1,8 +1,11 @@
 import React from "react";
+import '../styles/about.css';
+import Avatar   from '@material-ui/core/Avatar'
 
 function AboutMe() {
     return (
         <div class="MyBio">
+            <p><Avatar src="KirkEThomas3.jpg" alt="Avatar" class="avatar"/></p>
             <p>
                 Full stack web developer with a solid history of creating web applications for organizations
                 Core, VB,

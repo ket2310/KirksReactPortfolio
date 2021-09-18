@@ -17,7 +17,7 @@ h1 {
   text-align: right;
   padding: 1%;
   width: 400px;
-  font-size: 200%;
+  font-size: 100%;
   background-color: var(--block-background);
   color: var(--block-font);
 }
@@ -61,6 +61,7 @@ li {
 }
 nav a {
   color: var(--block-background);
+  font-size: large;
   font-weight: bold;
   text-decoration: none;
 }

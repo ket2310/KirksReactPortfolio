@@ -1,0 +1,19 @@
+:root {
+    --block-background: rgb(255, 128, 0);
+    --block-font: rgb(0,0,153);
+  }
+  
+  .MyBio {
+    Background-color: var(--block-font);
+    color: var(--block-background);
+
+    margin-left: 3%;
+    /* margin-top: 3%; */
+    font-size: 25px; 
+  } 
+  .avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
