@@ -4,8 +4,8 @@ import Avatar   from '@material-ui/core/Avatar'
 
 function AboutMe() {
     return (
-        <div class="MyBio">
-            <p><Avatar src="KirkEThomas3.jpg" alt="Avatar" class="avatar"/></p>
+        <div className="MyBio">
+            <Avatar src="KirkEThomas3.jpg" alt="Avatar" className="avatar"/>
             <p>
                 Full stack web developer with a solid history of creating web applications for organizations
                 Core, VB,
