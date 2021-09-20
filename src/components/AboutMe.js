@@ -1,11 +1,12 @@
 import React from "react";
 import '../styles/about.css';
+import ktAvatar from "../images/KirkEThomas.jpg"
 import Avatar   from '@material-ui/core/Avatar'
 
 function AboutMe() {
     return (
         <div className="MyBio">
-            <Avatar src="KirkEThomas3.jpg" alt="Avatar" className="avatar"/>
+            <Avatar src={ktAvatar} alt="Avatar" className="avatar"/>
             <p>
                 Full stack web developer with a solid history of creating web applications for organizations
                 Core, VB,

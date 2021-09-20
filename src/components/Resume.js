@@ -1,10 +1,10 @@
 import React from "react";
-
+import MyResume from "./The Resume of Kirk E Thomas.pdf"
 
 function Resume() {
     return (
         <div>
-            <p><a id="MyResume" href="The Resume of Kirk E Thomas.pdf"
+            <p><a id="MyResume" href={MyResume}
             download>View Resume</a></p>
             <br />
             <p>Skills and Languages</p>

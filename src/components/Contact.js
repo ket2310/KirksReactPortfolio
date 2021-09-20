@@ -1,11 +1,11 @@
-
 import React, { useState } from "react";
-
+import { emptyField, validateEmail } from '../utils/helpers';
 
 function Contact() {// Here we set two state variables for firstName and lastName using `useState`
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
   
   const handleInputChange = (e) => {
     // Getting the value and name of the input which triggered the change
@@ -23,6 +23,15 @@ function Contact() {// Here we set two state variables for firstName and lastNam
     // Preventing the default behavior of the form submit (which is to refresh the page)
     e.preventDefault();
 
+    if (!validateEmail(email) ) {
+      setErrorMessage('Email Is invalid');
+      // We want to exit out of this code block if something is wrong so that the user can correct it
+      return;
+      // Then we check to see if the password is not valid. If so, we set an error message regarding the password.
+    }
+    if( !emptyField(email) || !emptyField(name) || !emptyField(message)){
+      setErrorMessage("Fields cannot be empty. ")
+    }
     setName('');
     setEmail('');
     setMessage('');
@@ -57,10 +66,13 @@ function Contact() {// Here we set two state variables for firstName and lastNam
           placeholder="Message"
         />
         <br/>
-        <button type="button" onClick={handleFormSubmit}>
-          Submit
-        </button>
+        
+        <button type="button" onClick={handleFormSubmit}>Submit</button>
       </form>
+      {errorMessage && (
+        <div>
+          <p className="error-text">{errorMessage}</p>
+        </div>)}
     </div>
   );
 

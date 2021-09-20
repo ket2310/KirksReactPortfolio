@@ -4,6 +4,7 @@ import Portfolio from './Portfolio';
 import Contact from './Contact';
 import Resume from './Resume';
 import MyHeader from './MyHeader';
+import MyFooter from './MyFooter';
 import '../styles/maincontent.css';
 
 export default function MainContainer(props) {
@@ -39,6 +40,7 @@ export default function MainContainer(props) {
             <MyHeader currentPage={props.currPg} handlePageChange={handlePageChange} />
             {/* Here we are calling the renderPage method which will return a component  */}
             {renderNavigaition()}
+            <MyFooter />
         </div>
     );
 }
